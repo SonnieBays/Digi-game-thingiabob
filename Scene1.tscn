@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c26545ccxua33"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_dqxwu"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" type="CharacterBody3D" parent="."]
+script = ExtResource("1_dqxwu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
