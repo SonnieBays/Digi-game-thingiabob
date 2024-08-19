@@ -1,6 +1,4 @@
-
-
-# Declare member variables here. Examples:
+# Declare member variables here
 var speed = 10.0
 var jump_speed = 20.0
 var gravity = -9.8
@@ -35,7 +33,6 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	else:
-		velocity.y = 0
 		if Input.is_action_just_pressed("jump") and not is_jumping:
 			velocity.y = jump_speed
 			is_jumping = true
@@ -50,3 +47,4 @@ func _physics_process(delta):
 	# Check if character is back on the floor
 	if is_on_floor():
 		is_jumping = false
+
