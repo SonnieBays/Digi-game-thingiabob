@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcse5lbx0upvo"]
+
+[ext_resource type="Script" path="res://options.gd" id="1_q88ij"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q88ij")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -113.0
+offset_right = 31.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Return" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Return"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 117.0
+offset_right = 846.0
+offset_bottom = 333.0
+text = "Options"
+
+[connection signal="pressed" from="VBoxContainer/Return" to="." method="_on_return_pressed"]

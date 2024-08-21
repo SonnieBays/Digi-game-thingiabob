@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://hdk311i8xp5e"]
+[gd_scene load_steps=13 format=3 uid="uid://hdk311i8xp5e"]
 
+[ext_resource type="Script" path="res://world.gd" id="1_h4i3v"]
 [ext_resource type="Script" path="res://PlayerManager.gd" id="1_t54i8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mjs4l"]
@@ -36,6 +37,7 @@ size = Vector3(0.25, 0.25, 1)
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v07f2"]
 
 [node name="world" type="Node3D"]
+script = ExtResource("1_h4i3v")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_pcamo")
