@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwy8k3erc4a0v"
+path="res://.godot/imported/night-thunder-abbynoise-main-version-02-38-13101.mp3-d394d38d259edcbcdd465a0993ebc743.mp3str"
+
+[deps]
+
+source_file="res://Music&Soundeffects/Soundtrack and wepon sounds-Digi/night-thunder-abbynoise-main-version-02-38-13101.mp3"
+dest_files=["res://.godot/imported/night-thunder-abbynoise-main-version-02-38-13101.mp3-d394d38d259edcbcdd465a0993ebc743.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dinmq8uo7hx7a"
+path="res://.godot/imported/hand-gun-pistol-shot-gfx-sounds-3-3-00-01.mp3-f71f03e188f1d4d73f178c969d361339.mp3str"
+
+[deps]
+
+source_file="res://Music&Soundeffects/Soundtrack and wepon sounds-Digi/hand-gun-pistol-shot-gfx-sounds-3-3-00-01.mp3"
+dest_files=["res://.godot/imported/hand-gun-pistol-shot-gfx-sounds-3-3-00-01.mp3-f71f03e188f1d4d73f178c969d361339.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
