@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bk0hrrywqf8ua"
+path="res://.godot/imported/person assembled.obj-de3ce047ae52bd7d919692f7ac64fc8e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/person assembled.obj-de3ce047ae52bd7d919692f7ac64fc8e.mesh"]
+
+source_file="res://person assembled.obj"
+dest_files=["res://.godot/imported/person assembled.obj-de3ce047ae52bd7d919692f7ac64fc8e.mesh", "res://.godot/imported/person assembled.obj-de3ce047ae52bd7d919692f7ac64fc8e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

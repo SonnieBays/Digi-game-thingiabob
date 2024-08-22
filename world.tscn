@@ -1,7 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://hdk311i8xp5e"]
+[gd_scene load_steps=14 format=3 uid="uid://csdyqngoippax"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_h4i3v"]
 [ext_resource type="Script" path="res://PlayerManager.gd" id="1_t54i8"]
+[ext_resource type="ArrayMesh" uid="uid://drx4rhpmwpjaq" path="res://head.obj" id="3_j62w7"]
+[ext_resource type="ArrayMesh" uid="uid://bk0hrrywqf8ua" path="res://person assembled.obj" id="3_rk7ga"]
+[ext_resource type="PackedScene" uid="uid://qwmqiygehbj4" path="res://hows.glb" id="4_n8i8h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mjs4l"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -29,11 +32,6 @@ size = Vector2(50, 50)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_uq0k8"]
 data = PackedVector3Array(25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0, -25, 25, 0, -25)
 
-[sub_resource type="BoxMesh" id="BoxMesh_e7031"]
-size = Vector3(0.25, 0.25, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_wjir6"]
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v07f2"]
 
 [node name="world" type="Node3D"]
@@ -48,6 +46,7 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.999881, -0.00834129, 0.0129566, 0, 0.840823, 0.541311, -0.0154094, -0.541246, 0.840723, 0.423339, 17.6866, 27.4695)
+fov = 14.0
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14705, 0.766468, -1.47969)
@@ -71,13 +70,16 @@ camera = NodePath("../Camera3D")
 navigation_agent = NodePath("NavigationAgent3D")
 
 [node name="Head" type="MeshInstance3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.598, -0.5)
-mesh = SubResource("BoxMesh_e7031")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.598, 0.539765)
+mesh = ExtResource("3_j62w7")
 
 [node name="Body" type="MeshInstance3D" parent="Player"]
-mesh = SubResource("CapsuleMesh_wjir6")
+mesh = ExtResource("3_rk7ga")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 shape = SubResource("CapsuleShape3D_v07f2")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Player"]
+
+[node name="hows" parent="." instance=ExtResource("4_n8i8h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.72587, -2.39652, -3.08895)
