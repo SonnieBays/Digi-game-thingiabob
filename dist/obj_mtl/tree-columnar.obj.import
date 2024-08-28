@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b2yvoctgt5ii5"
+path="res://.godot/imported/tree-columnar.obj-3d69693f4f475b133e174c4e4d7b7b4b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tree-columnar.obj-3d69693f4f475b133e174c4e4d7b7b4b.mesh"]
+
+source_file="res://dist/obj_mtl/tree-columnar.obj"
+dest_files=["res://.godot/imported/tree-columnar.obj-3d69693f4f475b133e174c4e4d7b7b4b.mesh", "res://.godot/imported/tree-columnar.obj-3d69693f4f475b133e174c4e4d7b7b4b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

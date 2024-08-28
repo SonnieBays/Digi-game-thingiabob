@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://csdyqngoippax"]
+[gd_scene load_steps=14 format=3 uid="uid://hdk311i8xp5e"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_h4i3v"]
 [ext_resource type="Script" path="res://PlayerManager.gd" id="1_t54i8"]
@@ -46,7 +46,7 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.999881, -0.00834129, 0.0129566, 0, 0.840823, 0.541311, -0.0154094, -0.541246, 0.840723, 0.423339, 17.6866, 27.4695)
-fov = 14.0
+fov = 56.3
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14705, 0.766468, -1.47969)
