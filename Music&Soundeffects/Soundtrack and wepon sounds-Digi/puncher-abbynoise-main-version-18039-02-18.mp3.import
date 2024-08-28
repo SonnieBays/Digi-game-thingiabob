@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xa1y7c25rxp3"
+path="res://.godot/imported/puncher-abbynoise-main-version-18039-02-18.mp3-fb1f1fd8f3b0edb64251220f100bc7fe.mp3str"
+
+[deps]
+
+source_file="res://Music&Soundeffects/Soundtrack and wepon sounds-Digi/puncher-abbynoise-main-version-18039-02-18.mp3"
+dest_files=["res://.godot/imported/puncher-abbynoise-main-version-18039-02-18.mp3-fb1f1fd8f3b0edb64251220f100bc7fe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

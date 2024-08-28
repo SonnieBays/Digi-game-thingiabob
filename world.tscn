@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://world.gd" id="1_h4i3v"]
 [ext_resource type="Script" path="res://PlayerManager.gd" id="1_t54i8"]
 [ext_resource type="ArrayMesh" uid="uid://drx4rhpmwpjaq" path="res://head.obj" id="3_j62w7"]
-[ext_resource type="ArrayMesh" uid="uid://bk0hrrywqf8ua" path="res://person assembled.obj" id="3_rk7ga"]
+[ext_resource type="ArrayMesh" uid="uid://3aaq5s3eucwf" path="res://person assembled headless.obj" id="4_ack3d"]
 [ext_resource type="PackedScene" uid="uid://qwmqiygehbj4" path="res://hows.glb" id="4_n8i8h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mjs4l"]
@@ -70,13 +70,15 @@ camera = NodePath("../Camera3D")
 navigation_agent = NodePath("NavigationAgent3D")
 
 [node name="Head" type="MeshInstance3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.598, 0.539765)
+transform = Transform3D(0.996151, 0, 0, 0, 0.996151, 0, 0, 0, 0.996151, -0.00475407, 0.172962, 0.00262618)
 mesh = ExtResource("3_j62w7")
 
 [node name="Body" type="MeshInstance3D" parent="Player"]
-mesh = ExtResource("3_rk7ga")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00475407, 0.290716, 0.00291991)
+mesh = ExtResource("4_ack3d")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.477491, 0)
 shape = SubResource("CapsuleShape3D_v07f2")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Player"]

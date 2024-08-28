@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbabrfq604tfg"]
+
+[ext_resource type="AudioStream" uid="uid://dwy8k3erc4a0v" path="res://Music&Soundeffects/Soundtrack and wepon sounds-Digi/night-thunder-abbynoise-main-version-02-38-13101.mp3" id="1_tu7re"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_tu7re")
+autoplay = true
