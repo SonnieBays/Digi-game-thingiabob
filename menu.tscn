@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://baaqv2y5dbqj3"]
+[gd_scene load_steps=4 format=3 uid="uid://baaqv2y5dbqj3"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_pbh8w"]
+[ext_resource type="PackedScene" uid="uid://bbabrfq604tfg" path="res://audio_stream_player.tscn" id="2_6vo4d"]
 
 [sub_resource type="Theme" id="Theme_fv7ey"]
 
@@ -52,6 +53,8 @@ offset_right = 341.0
 offset_bottom = 186.0
 grow_horizontal = 2
 text = "TOP DOWN TACTICS"
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("2_6vo4d")]
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
