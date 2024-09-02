@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://hdk311i8xp5e"]
+[gd_scene load_steps=17 format=3 uid="uid://dhqcot88rtpqo"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_h4i3v"]
 [ext_resource type="Script" path="res://PlayerManager.gd" id="1_t54i8"]
@@ -6,7 +6,7 @@
 [ext_resource type="ArrayMesh" uid="uid://3aaq5s3eucwf" path="res://person assembled headless.obj" id="4_ack3d"]
 [ext_resource type="PackedScene" uid="uid://qwmqiygehbj4" path="res://hows.glb" id="4_n8i8h"]
 [ext_resource type="ArrayMesh" uid="uid://dcjhcbu2ekpv1" path="res://dist/obj_mtl/tree-pyramidal.obj" id="5_0s2yh"]
-[ext_resource type="PackedScene" uid="uid://hgysx4jr4ff0" path="res://game_menu.tscn" id="7_vngma"]
+[ext_resource type="PackedScene" path="res://game_menu.tscn" id="7_vngma"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mjs4l"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -31,8 +31,10 @@ albedo_color = Color(0, 0.262745, 0, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_1uc5o"]
 size = Vector2(50, 50)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_uq0k8"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jkgcx"]
 data = PackedVector3Array(25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0, -25, 25, 0, -25)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l3y4e"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v07f2"]
 
@@ -64,7 +66,7 @@ material_override = SubResource("StandardMaterial3D_pfejy")
 mesh = SubResource("PlaneMesh_1uc5o")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Terrain"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.105893, 0)
+shape = SubResource("ConcavePolygonShape3D_jkgcx")
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera", "navigation_agent")]
 script = ExtResource("1_t54i8")
@@ -72,8 +74,8 @@ camera = NodePath("../Camera3D")
 navigation_agent = NodePath("NavigationAgent3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -2.39652, -1)
-shape = SubResource("ConcavePolygonShape3D_uq0k8")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -0.346437, 0.0995145)
+shape = SubResource("CapsuleShape3D_l3y4e")
 
 [node name="Head" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(0.996151, 0, 0, 0, 0.996151, 0, 0, 0, 0.996151, -0.00475407, 0.172962, 0.00262618)
