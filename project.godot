@@ -15,11 +15,6 @@ run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-Menu_Music="*res://audio_stream_player.tscn"
-GameMusic="*res://game_menu.tscn"
-
 [input]
 
 Primary_action={
