@@ -6,7 +6,7 @@
 [ext_resource type="ArrayMesh" uid="uid://3aaq5s3eucwf" path="res://person assembled headless.obj" id="4_ack3d"]
 [ext_resource type="PackedScene" uid="uid://qwmqiygehbj4" path="res://hows.glb" id="4_n8i8h"]
 [ext_resource type="ArrayMesh" uid="uid://dcjhcbu2ekpv1" path="res://dist/obj_mtl/tree-pyramidal.obj" id="5_0s2yh"]
-[ext_resource type="PackedScene" path="res://game_menu.tscn" id="7_vngma"]
+[ext_resource type="PackedScene" uid="uid://hgysx4jr4ff0" path="res://game_menu.tscn" id="7_vngma"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mjs4l"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
