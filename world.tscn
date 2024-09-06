@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://csdyqngoippax"]
+[gd_scene load_steps=17 format=3 uid="uid://dhqcot88rtpqo"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_h4i3v"]
 [ext_resource type="Script" path="res://Player.gd" id="2_0sn0q"]
@@ -6,8 +6,8 @@
 [ext_resource type="ArrayMesh" uid="uid://3aaq5s3eucwf" path="res://person assembled headless.obj" id="4_ack3d"]
 [ext_resource type="PackedScene" uid="uid://qwmqiygehbj4" path="res://hows.glb" id="4_n8i8h"]
 [ext_resource type="Script" path="res://gun_controller.gd" id="5_xq5yy"]
-[ext_resource type="PackedScene" uid="uid://b02l12ssv4iww" path="res://gun.tscn" id="6_c0a3w"]
-[ext_resource type="PackedScene" uid="uid://uomu5etelsuk" path="res://enemy.tscn" id="7_h6or7"]
+[ext_resource type="PackedScene" path="res://gun.tscn" id="6_c0a3w"]
+[ext_resource type="PackedScene" path="res://enemy.tscn" id="7_h6or7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mjs4l"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)

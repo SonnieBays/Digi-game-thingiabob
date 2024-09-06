@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1psrem7ughbl"]
+
+[ext_resource type="AudioStream" uid="uid://dluq6qh4hb6ge" path="res://Music&Soundeffects/Soundtrack and wepon sounds-Digi/pursuit-abbynoise-main-version-02-33-17442.mp3" id="1_0es35"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_0es35")
+autoplay = true

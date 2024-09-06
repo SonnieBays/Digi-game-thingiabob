@@ -1,9 +1,216 @@
-[gd_scene load_steps=4 format=3 uid="uid://baaqv2y5dbqj3"]
+[gd_scene load_steps=6 format=3 uid="uid://dv6xsolgl6p8v"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_pbh8w"]
 [ext_resource type="PackedScene" uid="uid://bbabrfq604tfg" path="res://audio_stream_player.tscn" id="2_6vo4d"]
+[ext_resource type="Texture2D" uid="uid://lpepkxefdywx" path="res://Menu backgrounds/police design.png" id="3_eklwo"]
 
 [sub_resource type="Theme" id="Theme_fv7ey"]
+
+[sub_resource type="FontFile" id="FontFile_twjqf"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/61/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/41/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/81/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/91/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/111/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/121/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/131/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/51/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/31/0 = Vector2(0, 0)
+cache/0/61/0/ascent = 0.0
+cache/0/61/0/descent = 0.0
+cache/0/61/0/underline_position = 0.0
+cache/0/61/0/underline_thickness = 0.0
+cache/0/61/0/scale = 1.0
+cache/0/61/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/61/0/kerning_overrides/61/0 = Vector2(0, 0)
+cache/0/61/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/61/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/61/0/kerning_overrides/41/0 = Vector2(0, 0)
+cache/0/61/0/kerning_overrides/81/0 = Vector2(0, 0)
+cache/0/61/0/kerning_overrides/91/0 = Vector2(0, 0)
+cache/0/61/0/kerning_overrides/111/0 = Vector2(0, 0)
+cache/0/61/0/kerning_overrides/121/0 = Vector2(0, 0)
+cache/0/61/0/kerning_overrides/131/0 = Vector2(0, 0)
+cache/0/61/0/kerning_overrides/51/0 = Vector2(0, 0)
+cache/0/61/0/kerning_overrides/31/0 = Vector2(0, 0)
+cache/0/1/0/ascent = 0.0
+cache/0/1/0/descent = 0.0
+cache/0/1/0/underline_position = 0.0
+cache/0/1/0/underline_thickness = 0.0
+cache/0/1/0/scale = 1.0
+cache/0/1/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/61/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/41/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/81/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/91/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/111/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/121/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/131/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/51/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/31/0 = Vector2(0, 0)
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/21/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/61/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/41/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/81/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/91/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/111/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/121/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/131/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/51/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/31/0 = Vector2(0, 0)
+cache/0/41/0/ascent = 0.0
+cache/0/41/0/descent = 0.0
+cache/0/41/0/underline_position = 0.0
+cache/0/41/0/underline_thickness = 0.0
+cache/0/41/0/scale = 1.0
+cache/0/41/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/41/0/kerning_overrides/61/0 = Vector2(0, 0)
+cache/0/41/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/41/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/41/0/kerning_overrides/41/0 = Vector2(0, 0)
+cache/0/41/0/kerning_overrides/81/0 = Vector2(0, 0)
+cache/0/41/0/kerning_overrides/91/0 = Vector2(0, 0)
+cache/0/41/0/kerning_overrides/111/0 = Vector2(0, 0)
+cache/0/41/0/kerning_overrides/121/0 = Vector2(0, 0)
+cache/0/41/0/kerning_overrides/131/0 = Vector2(0, 0)
+cache/0/41/0/kerning_overrides/51/0 = Vector2(0, 0)
+cache/0/41/0/kerning_overrides/31/0 = Vector2(0, 0)
+cache/0/81/0/ascent = 0.0
+cache/0/81/0/descent = 0.0
+cache/0/81/0/underline_position = 0.0
+cache/0/81/0/underline_thickness = 0.0
+cache/0/81/0/scale = 1.0
+cache/0/81/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/81/0/kerning_overrides/61/0 = Vector2(0, 0)
+cache/0/81/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/81/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/81/0/kerning_overrides/41/0 = Vector2(0, 0)
+cache/0/81/0/kerning_overrides/81/0 = Vector2(0, 0)
+cache/0/81/0/kerning_overrides/91/0 = Vector2(0, 0)
+cache/0/81/0/kerning_overrides/111/0 = Vector2(0, 0)
+cache/0/81/0/kerning_overrides/121/0 = Vector2(0, 0)
+cache/0/81/0/kerning_overrides/131/0 = Vector2(0, 0)
+cache/0/81/0/kerning_overrides/51/0 = Vector2(0, 0)
+cache/0/81/0/kerning_overrides/31/0 = Vector2(0, 0)
+cache/0/91/0/ascent = 0.0
+cache/0/91/0/descent = 0.0
+cache/0/91/0/underline_position = 0.0
+cache/0/91/0/underline_thickness = 0.0
+cache/0/91/0/scale = 1.0
+cache/0/91/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/91/0/kerning_overrides/61/0 = Vector2(0, 0)
+cache/0/91/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/91/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/91/0/kerning_overrides/41/0 = Vector2(0, 0)
+cache/0/91/0/kerning_overrides/81/0 = Vector2(0, 0)
+cache/0/91/0/kerning_overrides/91/0 = Vector2(0, 0)
+cache/0/91/0/kerning_overrides/111/0 = Vector2(0, 0)
+cache/0/91/0/kerning_overrides/121/0 = Vector2(0, 0)
+cache/0/91/0/kerning_overrides/131/0 = Vector2(0, 0)
+cache/0/91/0/kerning_overrides/51/0 = Vector2(0, 0)
+cache/0/91/0/kerning_overrides/31/0 = Vector2(0, 0)
+cache/0/111/0/ascent = 0.0
+cache/0/111/0/descent = 0.0
+cache/0/111/0/underline_position = 0.0
+cache/0/111/0/underline_thickness = 0.0
+cache/0/111/0/scale = 1.0
+cache/0/111/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/111/0/kerning_overrides/61/0 = Vector2(0, 0)
+cache/0/111/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/111/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/111/0/kerning_overrides/41/0 = Vector2(0, 0)
+cache/0/111/0/kerning_overrides/81/0 = Vector2(0, 0)
+cache/0/111/0/kerning_overrides/91/0 = Vector2(0, 0)
+cache/0/111/0/kerning_overrides/111/0 = Vector2(0, 0)
+cache/0/111/0/kerning_overrides/121/0 = Vector2(0, 0)
+cache/0/111/0/kerning_overrides/131/0 = Vector2(0, 0)
+cache/0/111/0/kerning_overrides/51/0 = Vector2(0, 0)
+cache/0/111/0/kerning_overrides/31/0 = Vector2(0, 0)
+cache/0/121/0/ascent = 0.0
+cache/0/121/0/descent = 0.0
+cache/0/121/0/underline_position = 0.0
+cache/0/121/0/underline_thickness = 0.0
+cache/0/121/0/scale = 1.0
+cache/0/121/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/121/0/kerning_overrides/61/0 = Vector2(0, 0)
+cache/0/121/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/121/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/121/0/kerning_overrides/41/0 = Vector2(0, 0)
+cache/0/121/0/kerning_overrides/81/0 = Vector2(0, 0)
+cache/0/121/0/kerning_overrides/91/0 = Vector2(0, 0)
+cache/0/121/0/kerning_overrides/111/0 = Vector2(0, 0)
+cache/0/121/0/kerning_overrides/121/0 = Vector2(0, 0)
+cache/0/121/0/kerning_overrides/131/0 = Vector2(0, 0)
+cache/0/121/0/kerning_overrides/51/0 = Vector2(0, 0)
+cache/0/121/0/kerning_overrides/31/0 = Vector2(0, 0)
+cache/0/131/0/ascent = 0.0
+cache/0/131/0/descent = 0.0
+cache/0/131/0/underline_position = 0.0
+cache/0/131/0/underline_thickness = 0.0
+cache/0/131/0/scale = 1.0
+cache/0/131/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/131/0/kerning_overrides/61/0 = Vector2(0, 0)
+cache/0/131/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/131/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/131/0/kerning_overrides/41/0 = Vector2(0, 0)
+cache/0/131/0/kerning_overrides/81/0 = Vector2(0, 0)
+cache/0/131/0/kerning_overrides/91/0 = Vector2(0, 0)
+cache/0/131/0/kerning_overrides/111/0 = Vector2(0, 0)
+cache/0/131/0/kerning_overrides/121/0 = Vector2(0, 0)
+cache/0/131/0/kerning_overrides/131/0 = Vector2(0, 0)
+cache/0/131/0/kerning_overrides/51/0 = Vector2(0, 0)
+cache/0/131/0/kerning_overrides/31/0 = Vector2(0, 0)
+cache/0/51/0/ascent = 0.0
+cache/0/51/0/descent = 0.0
+cache/0/51/0/underline_position = 0.0
+cache/0/51/0/underline_thickness = 0.0
+cache/0/51/0/scale = 1.0
+cache/0/51/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/51/0/kerning_overrides/61/0 = Vector2(0, 0)
+cache/0/51/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/51/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/51/0/kerning_overrides/41/0 = Vector2(0, 0)
+cache/0/51/0/kerning_overrides/81/0 = Vector2(0, 0)
+cache/0/51/0/kerning_overrides/91/0 = Vector2(0, 0)
+cache/0/51/0/kerning_overrides/111/0 = Vector2(0, 0)
+cache/0/51/0/kerning_overrides/121/0 = Vector2(0, 0)
+cache/0/51/0/kerning_overrides/131/0 = Vector2(0, 0)
+cache/0/51/0/kerning_overrides/51/0 = Vector2(0, 0)
+cache/0/51/0/kerning_overrides/31/0 = Vector2(0, 0)
+cache/0/31/0/ascent = 0.0
+cache/0/31/0/descent = 0.0
+cache/0/31/0/underline_position = 0.0
+cache/0/31/0/underline_thickness = 0.0
+cache/0/31/0/scale = 1.0
+cache/0/31/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/61/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/41/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/81/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/91/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/111/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/121/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/131/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/51/0 = Vector2(0, 0)
+cache/0/31/0/kerning_overrides/31/0 = Vector2(0, 0)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -29,19 +236,6 @@ offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Start
-"
-
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Options"
-
-[node name="StoreButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Store"
-
 [node name="TextEdit" type="TextEdit" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -56,6 +250,119 @@ text = "TOP DOWN TACTICS"
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("2_6vo4d")]
 
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/StoreButton" to="." method="_on_store_button_pressed"]
+[node name="StoreButton" type="Node2D" parent="."]
+position = Vector2(0, 62)
+
+[node name="TextureRect" type="TextureRect" parent="StoreButton"]
+texture_filter = 1
+offset_left = 402.0
+offset_top = 354.0
+offset_right = 592.0
+offset_bottom = 386.0
+scale = Vector2(1.81, 1.81)
+size_flags_horizontal = 4
+texture = ExtResource("3_eklwo")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="StoreButton"]
+offset_left = 501.0
+offset_top = 355.0
+offset_right = 848.0
+offset_bottom = 477.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("FontFile_twjqf")
+theme_override_font_sizes/normal_font_size = 61
+text = "Store"
+metadata/_edit_use_anchors_ = true
+
+[node name="StoreButton" type="Button" parent="StoreButton"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 402.0
+offset_top = 354.0
+offset_right = 747.0
+offset_bottom = 413.0
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+text = "Store"
+metadata/_edit_use_anchors_ = true
+
+[node name="StartButton" type="Node2D" parent="."]
+position = Vector2(1, -79)
+
+[node name="TextureRect" type="TextureRect" parent="StartButton"]
+texture_filter = 1
+offset_left = 402.0
+offset_top = 354.0
+offset_right = 592.0
+offset_bottom = 386.0
+scale = Vector2(1.81, 1.81)
+size_flags_horizontal = 4
+texture = ExtResource("3_eklwo")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="StartButton"]
+offset_left = 501.0
+offset_top = 355.0
+offset_right = 848.0
+offset_bottom = 477.0
+mouse_filter = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("FontFile_twjqf")
+theme_override_font_sizes/normal_font_size = 61
+text = "Start"
+metadata/_edit_use_anchors_ = true
+
+[node name="StartButton" type="Button" parent="StartButton"]
+modulate = Color(1, 1, 1, 0.027451)
+offset_left = 400.0
+offset_top = 353.0
+offset_right = 749.0
+offset_bottom = 413.0
+text = "Start
+"
+
+[node name="OptionsButton" type="Node2D" parent="."]
+position = Vector2(1, -8)
+
+[node name="TextureRect" type="TextureRect" parent="OptionsButton"]
+texture_filter = 1
+offset_left = 402.0
+offset_top = 354.0
+offset_right = 592.0
+offset_bottom = 386.0
+scale = Vector2(1.81, 1.81)
+size_flags_horizontal = 4
+texture = ExtResource("3_eklwo")
+stretch_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OptionsButton"]
+offset_left = 501.0
+offset_top = 355.0
+offset_right = 848.0
+offset_bottom = 477.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("FontFile_twjqf")
+theme_override_font_sizes/normal_font_size = 51
+text = "Options"
+
+[node name="OptionsButton" type="Button" parent="OptionsButton"]
+modulate = Color(1, 1, 1, 0.027451)
+offset_left = 402.0
+offset_top = 353.0
+offset_right = 746.0
+offset_bottom = 412.0
+text = "Options"
+
+[connection signal="pressed" from="StoreButton/StoreButton" to="." method="_on_store_button_pressed"]
+[connection signal="pressed" from="StartButton/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="OptionsButton/OptionsButton" to="." method="_on_options_button_pressed"]
