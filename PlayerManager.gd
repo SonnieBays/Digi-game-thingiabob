@@ -33,10 +33,7 @@ func get_world_pos() -> void:
 
 
 	var result = space.intersect_ray(ray_query)
-	print(result)
-	
-	if(result != {}):
-		navigation_agent.target_position = result.values()[0];
+	navigation_agent.target_position = result.position;
 
 func movement() -> Vector3:
 	var next_path_position = navigation_agent.get_next_path_position()
@@ -44,6 +41,7 @@ func movement() -> Vector3:
 	
 	var new_velocity = next_path_position - current_agent_position
 	new_velocity = new_velocity.normalized() * speed
+	
 	return new_velocity
 
 	

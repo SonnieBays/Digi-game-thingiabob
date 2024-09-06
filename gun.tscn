@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b02l12ssv4iww"]
+
+[ext_resource type="Script" path="res://gun.gd" id="1_3pt30"]
+[ext_resource type="PackedScene" uid="uid://n000ulxdb5fb" path="res://bullet.tscn" id="2_k7v4i"]
+[ext_resource type="PackedScene" uid="uid://d206l5aaor1nm" path="res://ar-15.glb" id="3_mvjh2"]
+
+[node name="gun" type="Node3D"]
+script = ExtResource("1_3pt30")
+Bullet = ExtResource("2_k7v4i")
+
+[node name="Muzzle" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00997591, 0.0721183, 1.0187)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("3_mvjh2")]
+transform = Transform3D(-0.1, 0, -1.50996e-08, 0, 0.1, 0, 1.50996e-08, 0, -0.1, -0.0265033, 0, -0.291212)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

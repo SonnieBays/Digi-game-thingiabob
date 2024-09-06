@@ -1,12 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://dhqcot88rtpqo"]
+[gd_scene load_steps=17 format=3 uid="uid://csdyqngoippax"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_h4i3v"]
-[ext_resource type="Script" path="res://PlayerManager.gd" id="1_t54i8"]
+[ext_resource type="Script" path="res://Player.gd" id="2_0sn0q"]
 [ext_resource type="ArrayMesh" uid="uid://drx4rhpmwpjaq" path="res://head.obj" id="3_j62w7"]
 [ext_resource type="ArrayMesh" uid="uid://3aaq5s3eucwf" path="res://person assembled headless.obj" id="4_ack3d"]
 [ext_resource type="PackedScene" uid="uid://qwmqiygehbj4" path="res://hows.glb" id="4_n8i8h"]
-[ext_resource type="ArrayMesh" uid="uid://dcjhcbu2ekpv1" path="res://dist/obj_mtl/tree-pyramidal.obj" id="5_0s2yh"]
-[ext_resource type="PackedScene" uid="uid://hgysx4jr4ff0" path="res://game_menu.tscn" id="7_vngma"]
+[ext_resource type="Script" path="res://gun_controller.gd" id="5_xq5yy"]
+[ext_resource type="PackedScene" uid="uid://b02l12ssv4iww" path="res://gun.tscn" id="6_c0a3w"]
+[ext_resource type="PackedScene" uid="uid://uomu5etelsuk" path="res://enemy.tscn" id="7_h6or7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mjs4l"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -31,10 +32,8 @@ albedo_color = Color(0, 0.262745, 0, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_1uc5o"]
 size = Vector2(50, 50)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jkgcx"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_uq0k8"]
 data = PackedVector3Array(25, 0, 25, -25, 0, 25, 25, 0, -25, -25, 0, 25, -25, 0, -25, 25, 0, -25)
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l3y4e"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v07f2"]
 
@@ -50,7 +49,7 @@ shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.999881, -0.00834129, 0.0129566, 0, 0.840823, 0.541311, -0.0154094, -0.541246, 0.840723, 0.423339, 17.6866, 27.4695)
-fov = 56.3
+fov = 14.0
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14705, 0.766468, -1.47969)
@@ -66,84 +65,36 @@ material_override = SubResource("StandardMaterial3D_pfejy")
 mesh = SubResource("PlaneMesh_1uc5o")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Terrain"]
-shape = SubResource("ConcavePolygonShape3D_jkgcx")
+shape = SubResource("ConcavePolygonShape3D_uq0k8")
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera", "navigation_agent")]
-script = ExtResource("1_t54i8")
+script = ExtResource("2_0sn0q")
 camera = NodePath("../Camera3D")
 navigation_agent = NodePath("NavigationAgent3D")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -0.346437, 0.0995145)
-shape = SubResource("CapsuleShape3D_l3y4e")
-
 [node name="Head" type="MeshInstance3D" parent="Player"]
-transform = Transform3D(0.996151, 0, 0, 0, 0.996151, 0, 0, 0, 0.996151, -0.00475407, 0.172962, 0.00262618)
+transform = Transform3D(0.996151, 0, 0, 0, 0.996151, 0, 0, 0, 0.996151, -0.00952029, 0.172962, 0.00555396)
 mesh = ExtResource("3_j62w7")
 
 [node name="Body" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00475407, 0.290716, 0.00291991)
 mesh = ExtResource("4_ack3d")
 
+[node name="hand" type="Node3D" parent="Player/Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6201, 0.793091, 0.0848968)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.477491, 0)
+shape = SubResource("CapsuleShape3D_v07f2")
+
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Player"]
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9035, 7.19862, 12.3558)
-shape = SubResource("CapsuleShape3D_v07f2")
-
-[node name="Tree-pyramidal" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.06384, -2.39652, 4.32862)
-mesh = ExtResource("5_0s2yh")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Tree-pyramidal"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33797, 3.83806, -1.23967)
-shape = SubResource("CapsuleShape3D_v07f2")
-
-[node name="Tree-pyramidal2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.59002, -2.4624, 2.62135)
-mesh = ExtResource("5_0s2yh")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Tree-pyramidal2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9779, 7.742, -0.772077)
-shape = SubResource("CapsuleShape3D_v07f2")
-
-[node name="Tree-pyramidal3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.759365, -2.39652, 12.4635)
-mesh = ExtResource("5_0s2yh")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Tree-pyramidal3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2111, 5.75709, -6.28562)
-shape = SubResource("CapsuleShape3D_v07f2")
-
-[node name="Tree-pyramidal4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.30491, -2.39652, 10.5302)
-mesh = ExtResource("5_0s2yh")
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Tree-pyramidal4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8727, 7.67612, -1.26338)
-shape = SubResource("CapsuleShape3D_v07f2")
-
-[node name="Tree-pyramidal5" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5248, -2.39652, 16.9764)
-mesh = ExtResource("5_0s2yh")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Tree-pyramidal5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0943, 26.8664, 9.14349)
-shape = SubResource("CapsuleShape3D_v07f2")
-
-[node name="Tree-pyramidal6" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0913, -2.39652, 10.9475)
-mesh = ExtResource("5_0s2yh")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Tree-pyramidal6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.26388, 13.4332, 7.58623)
-shape = SubResource("CapsuleShape3D_v07f2")
+[node name="gun controller" type="Node" parent="Player"]
+script = ExtResource("5_xq5yy")
+StartingWeapon = ExtResource("6_c0a3w")
 
 [node name="hows" parent="." instance=ExtResource("4_n8i8h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.72587, -2.39652, -3.08895)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="hows"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.72587, 1.91903, 3.08895)
-shape = SubResource("CapsuleShape3D_v07f2")
-
-[node name="AudioStreamPlayer" parent="." instance=ExtResource("7_vngma")]
+[node name="enemy" parent="." instance=ExtResource("7_h6or7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.16035, -2.39652, 5.87891)
