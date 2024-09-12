@@ -202,7 +202,7 @@ transform = Transform3D(0.999881, -0.00834129, 0.0129566, 0, 0.840823, 0.541311,
 fov = 14.0
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14705, 0.766468, -1.47969)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14705, 24.7122, -1.47969)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -2.39652, -1)
@@ -232,7 +232,7 @@ mesh = SubResource("ArrayMesh_ktgyf")
 skeleton = NodePath("")
 
 [node name="hand" type="Node3D" parent="Player/Body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.86668, 0.499935, -3.48413)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.61173, 0.499935, 0.216462)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.477491, 0)
@@ -248,4 +248,4 @@ StartingWeapon = ExtResource("6_c0a3w")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.72587, -2.39652, -3.08895)
 
 [node name="enemy" parent="." instance=ExtResource("7_h6or7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.16035, -2.39652, 5.87891)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1386, -2.39652, 3.33353)
