@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bpme2hrmqj3ns"
+path.s3tc="res://.godot/imported/person_skin-7_bump.jpg-3f8e992abacc2e553336347dbc9e1469.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "2f626a193477b6377faca2736a0f1371"
+}
+
+[deps]
+
+source_file="res://person_skin-7_bump.jpg"
+dest_files=["res://.godot/imported/person_skin-7_bump.jpg-3f8e992abacc2e553336347dbc9e1469.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://person_skin-7_bump.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
